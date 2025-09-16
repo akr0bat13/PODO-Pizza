@@ -8,22 +8,28 @@ interface Props {
   className?: string;
 }
 
-const categories = ['Пиццы', 'Комбо', 'Закуски', 'Коктейли', "Кофе"]
+const categories = [
+  {name: 'Пиццы', id: 1},
+  {name: 'Комбо', id: 2},
+  {name: 'Закуски', id: 3},
+  {name: 'Коктейли', id: 4},
+  {name: 'Кофе', id: 5},
+]
 
 export const Categories: React.FC<Props> = ({ className }) => {
   const categoryActiveId = useCategoryStore((state) => state.activeId);
 
   return (
     <div className={cn('inline-flex gap-1 bg-gray-50 p-1 rounded-2xl', className)}>
-      {categories.map((cat, index) => (
+      {categories.map(({name, id}, index) => (
         <a
           className={cn(
             'flex items-center font-bold h-11 rounded-2xl px-5',
-            categoryActiveId === index && 'bg-white shadow-md shadow-gray-200 text-primary',
+            categoryActiveId === id && 'bg-white shadow-md shadow-gray-200 text-primary',
           )}
-          href={`/#${cat}`}
+          href={`/#${name}`}
           key={index}>
-          <button>{cat}</button>
+          <button>{name}</button>
         </a>
       ))}
     </div>

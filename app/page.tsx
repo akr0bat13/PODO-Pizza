@@ -1,4 +1,4 @@
-import { Container, Filters, Title, TopBar } from "@/shared/components/shared";
+import { Container, Filters, ProductCard, ProductsGroupList, Title, TopBar } from "@/shared/components/shared";
 import { Suspense } from "react";
 
 
@@ -19,7 +19,86 @@ export default function Home() {
 
         <div className="flex-1">
           <div className="flex flex-col gap-16">
-            Список товаров
+            <ProductsGroupList
+            items={[
+              {
+                id: 1,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 2,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 3,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 4,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 5,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+            ]}
+            title="Пиццы"
+            categoryId={1} />
+            <ProductsGroupList
+            items={[
+              {
+                id: 1,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 2,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 3,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 4,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+              {
+                id: 5,
+                name: 'Пицца 1',
+                imageUrl: 'Image',
+                price: 550,
+                items: [{price: 500}]
+              },
+            ]}
+            title="Комбо"
+            categoryId={2} />
           </div>
         </div>
       </div>
