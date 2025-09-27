@@ -13,5 +13,6 @@ export {ProductImage} from './product-image'
 export {GroupVariants} from './group-variants'
 export {ChooseProductForm} from './choose-product-form'
 export {ProductForm} from './product-form'
+export {CartButton} from './cart-button'
 
 export * from './modals'
